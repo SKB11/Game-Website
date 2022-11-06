@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  background : url(menu/playbg.jpg);
+  background-size: 100vw 100vh;
+  height: 100vh;
+  padding-top: 1px;
+}
+/* TIC TAC TOE */
+.title {
+  font-family:'poppins' , sans-serif;
+  text-shadow: blue 0px 0px 39px;
+  background: -webkit-linear-gradient(to right, blue 0%, red 100%);
+  background: -moz-linear-gradient(to right, blue 0%, red 100%);
+  background: linear-gradient(to right, blue 0%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5%;
+}
+/* player X's turn */
+.display {
+  text-shadow: yellow 0px 0px 39px;
+  color: yellow;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family:'poppins' , sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  max-width: 300px;
+
+}
+
+.tile {
+  border: 1px solid white;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.playerX {
+  color: red;
+  text-shadow: red 0px 0px 39px;
+}
+
+.playerO {
+  color: blue;
+  text-shadow: blue 0px 0px 39px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.controls button {
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  margin-left: 1em;
+  cursor: pointer;
+}
+#reset {
+  background-color: rgb(255, 196, 0);
+  text-shadow: rgb(0, 17, 255) 0px 0px 39px;
+}
+/* bg music */
+#playy{
+  position:fixed;
+  top: 3%;
+  left: 90%;
+  width: 40px;
+  cursor: pointer;
+}
+/* logo */
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo{
+  width: 50px;
+}

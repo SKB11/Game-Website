@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="play.css">
+</head>
+<body>
+    <!-- logo -->
+<div>
+    <a href="index.html"><img src="ImgVid/logo.png" class="logo"></a>
+
+<!-- bg music -->
+    <img src="media/playB.png" id="playy">
+        <audio id="mysong">
+            <source src="media/audio.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mysong = document.getElementById("mysong");
+            var playy = document.getElementById("playy");
+
+            playy.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    playy.src="media/pauseB.png";
+                }
+                else{
+                    mysong.pause();
+                    playy.src="media/playB.png";
+                }
+            }
+        </script>
+</div>
+    <!-- games -->
+<div class="grid">
+        <div class="img-wrapper">
+            <img class="gray zoom" src="menu/SnakesGameS.jpg" style="width: 100%">
+            <div class="content slide-left fade">Snake-Game <br>To start the game, press any arrow key and the snake will move accordingly, the snake must eat the food and most importantly it must neither touch its body nor the walls in-order to beat the high-score<br>Click To Play <br></div>
+        </div>
+    
+        <div class="img-wrapper">
+            <img class="gray zoom" src="menu/TG.png" style="width: 100%">
+            <div class="content slide-up fade">Tic-Tac-Toe <br>To win the game, the player must get 3 constant X/O by rwo/column/diagonal through alternate moves. First to achieve this wins! <br>Click To Play <br></div>
+        </div>
+    
+        <div class="img-wrapper">
+            <img class="gray zoom blur" src="menu/S&L.jpg" style="width: 100%">
+            <div class="content slide-right fade">Snake & Ladder <br>This is a game of dice where each player gets a random number, they must reach the finish by climbing the numbers and also must escape from the snake. First to reach wins!<br>Click To Play <br></div>
+        </div>
+</div>
+<!-- game play buttons on img -->
+    
+    <div class="container">
+    <img src="menu/playbg.jpg" alt="Snow" style="width:100%">
+    <button class="btn"><a href="game2SG.html">Snake-Game</a></button>
+    <button class="btn2"><a href="game1TTT.html">Tic-Tac-Toe</a></button>
+    <button class="btn3"><a href="game3SL.html">Snake & Ladder</a></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake-Game</title>
+    <link rel="stylesheet" href="game2SG.css">
+</head>
+<body>
+    
+    <div class="body">
+        <nav><a href="index.html"><img src="ImgVid/logo.png" class="logo"></a></nav>
+        <div id="scoreBox">Score: 0</div>
+        <div id="hiscoreBox">HiScore: 0</div>
+        <div id="board"></div>
+    </div>
+
+    <!-- song -->
+    <div>
+        <img src="media/playB.png" id="playy">
+            <audio id="mysong">
+                <source src="media/audio.mp3" type="audio/mp3">
+            </audio>
+    
+            <script>
+                var mysong = document.getElementById("mysong");
+                var playy = document.getElementById("playy");
+    
+                playy.onclick = function(){
+                    if(mysong.paused){
+                        mysong.play();
+                        playy.src="media/pauseB.png";
+                    }
+                    else{
+                        mysong.pause();
+                        playy.src="media/playB.png";
+                    }
+                }
+            </script>
+    </div>
+</body>
+<p id="gameName">Snake Game</p>
+<script src="game2SG.js"></script>
+</html>

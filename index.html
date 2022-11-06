@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play-Time</title>
+    <link rel="stylesheet" href="index.css"
+</head>
+
+<body>
+<div class="hero">
+    <!-- bg video -->
+    <video autoplay loop muted plays-inline class="back_video">
+        <source src="ImgVid/RBvideo.mp4" type="video/mp4">
+    </video>
+    <!-- logo -->
+    <a href="index.html"><img src="ImgVid/logo.png" class="logo"></a>
+    <div class="content">
+        <a href="play.html"><h1>A Min To Win It</h1></a>
+        <!-- <a href="">Play</a> -->
+    </div>
+</div>
+<!-- background music -->
+<div>
+    <img src="media/playB.png" id="playy">
+        <audio id="mysong">
+            <source src="media/audio.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mysong = document.getElementById("mysong");
+            var playy = document.getElementById("playy");
+
+            playy.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    playy.src="media/pauseB.png";
+                }
+                else{
+                    mysong.pause();
+                    playy.src="media/playB.png";
+                }
+            }
+        </script>
+</div>
+</body>
+</html>
