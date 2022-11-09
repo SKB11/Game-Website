@@ -33,6 +33,23 @@
     font-family: 'poppins', sans-serif;
     color: yellow;
 }
+/* responsive */
+@media screen and (min-width: 1024px) {
+    .nav-list li a {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        grid-template-rows: 2fr 2fr 6fr;
+    }
+
+@media screen and (min-width: 768px){
+    .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+}
 
 #board{
     background: linear-gradient(rgb(223, 192, 71), rgb(225, 126, 126));
