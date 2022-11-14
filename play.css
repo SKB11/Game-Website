@@ -1,186 +1,138 @@
-body{
-    margin-top: 50px;
-    position: absolute;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 50px 0px 0px 0px;
+    color: white;
+    background-image: linear-gradient(56deg, #14288a 0%, #50154b 46%, #570572 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #000;
+}
+
+/* this holds the go-beyond text div (main div) */
+.main-container {
+    min-height: 100vh;
+    display: grid;
+    background-color: #000;
+    background: url(ImgVid/RBvideo.mp4);
+    background:url(menu/playbg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px 50px 50px 50px;
+
+}
+.box-container {
+    display: grid;
+    gap: 2rem;
+    /* grid-template-columns: 1fr 1fr; */
+    place-items: center;
+    margin: 2rem;
+    margin-top: 5rem;
+}
+
+/* below is the styling for article holding div */
+.box {
+    background-color: rgba(208, 223, 248, 0.619);
+    height: 320px;
+    width: 320px;
+    border-radius: 320px;
+    display: grid;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 5px rgba(11, 11, 11, 0.64);
+    transition: all .2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.img-frame {
+    height: 220px;
+    width: 220px;
+    border-radius: 220px;
+    box-shadow: 0px 0px 10px 5px rgba(11, 11, 11, 0.64);
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+/* below is the article image styling */
+.article-img {
+    height: 220px;
+    width: 220px;
+    transition: 0.5s ease-in-out;
+}
+
+.box:hover .article-img {
+    transform: scale(1.2);
+    transition-delay: .5ms;
+}
+
+.article-title {
+    font-family: 'Secular serif', sans-serif;
+    display: grid;
+    font-size: 1.2rem;
+    width: 220px;
+    justify-content: center;
+}
+
+@media screen and (min-width: 668px) {
+    .box-container {
+        display: grid;
+        /* place-items: center; */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+        margin:1rem;
+        margin-bottom: 1rem;
+    }
+}
+/* logo */
 .logo{
     width: 50px;
     position: fixed;
-    top: 3%;
-    left:3%;
+    top: 1%;
+    left:1%;
 }
-/* games */
-.content{
-    color: antiquewhite;
-    text-align: center;
-}
-.grid{
-    background: url(menu/playbg.jpg);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.img-wrapper{
-    position: relative;
-    overflow: hidden;
-}
-.img-wrapper{
-    display: block;
-    width: 90%;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center;
-}
-.img-wrapper > .content{
-    position: absolute;
-    inset: 0;
-    font-size: 1rem;
-    padding: 1rem;
-    background: rgba(2, 13, 99, 0.726);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img-wrapper > img,
-.img-wrapper > .content {
-    transition: 300ms ease-in-out;
-}
-.img-wrapper:hover > img.gray {
-    filter: grayscale(1);
-}
-/* zoom */
-.img-wrapper:hover > img.zoom {
-    transform: scale(1.1);
-}
-
-.img-wrapper > .content.fade{
-    opacity: 0;
-}
-.img-wrapper:hover > .content.fade{
-    opacity: 1;
-}
-/*  */
-.img-wrapper > .content.slide-left{
-    transform: translateX(-100%);
-}
-.img-wrapper:hover > .content.slide-left{
-    transform: translatex(0);
-}
-/*  */
-.img-wrapper > .content.slide-right{
-    transform: translateX(100%);
-}
-.img-wrapper:hover > .content.slide-right{
-    transform: translatex(0);
-}
-/*  */
-.img-wrapper > .content.slide-up{
-    transform: translateY(100%);
-}
-.img-wrapper:hover > .content.slide-up{
-    transform: translateY(0);
-}
-/* play game button */
-/* *********************************************************************** */
-.container {
-    position: absolute;
-    width: 100%;
-}
-
-.container img {
-width: 100%;
-height: auto;
-}
-
-.container .btn {
-display: inline-block;
-position: absolute;
-top: 50%;
-left: 23%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-background-color: #555;
-color: white;
-font-size: 16px;
-padding: 12px 24px;
-border: none;
-cursor: pointer;
-border-radius: 5px;
-text-align: center;
-}
-
-.container .btn:hover {
-background-color: black;
-}
-/*  2 */
-.container .btn2 {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    }
-    
-    .container .btn2:hover {
-    background-color: black;
-    }
-    /* 3 */
-    .container .btn3 {
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 73%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: #555;
-        color: white;
-        font-size: 16px;
-        padding: 12px 24px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
-        }
-        
-        .container .btn3:hover {
-        background-color: black;
-        }
 /* bg music */
 #playy{
     position: fixed;
-    top:3%;
-    left: 90%;
+    top:1%;
+    right:1%;
     width: 40px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
 }
-/* responsive */
-@media screen and (min-width: 1024px) {
-    .nav-list li a {
-        font-size: 1rem;
-    }
-
-    .main-container {
-        grid-template-rows: 2fr 2fr 6fr;
-    }
-
-@media screen and (min-width: 768px){
-    .box-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+/* bg vid */
+.back_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
+.back_video2{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
